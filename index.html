@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyNova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="assets/banner.png" alt="SkyNova Banner" class="banner">
+        <h1>SkyNova Sunucusuna Hoş Geldin!</h1>
+        <p id="oyuncu">Sunucu bilgisi alınıyor...</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>🎮 Rank Satın Al</h2>
+            <div class="package">
+                <h3>VIP Paketi</h3>
+                <p>Fiyat: 50₺</p>
+                <a href="https://www.papara.com/" target="_blank">Satın Al</a>
+            </div>
+            <div class="package">
+                <h3>MVP Paketi</h3>
+                <p>Fiyat: 90₺</p>
+                <a href="https://www.papara.com/" target="_blank">Satın Al</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>📰 Blog</h2>
+            <article>
+                <h3>SkyNova Açıldı!</h3>
+                <p>Yeni sistemlerle donatılmış EmekSkyblock sunucumuz artık aktif!</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>📬 İletişim</h2>
+            <p>Discord Sunucumuz: <a href="https://discord.gg/" target="_blank">discord.gg/skynova</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 SkyNova Sunucusu</p>
+    </footer>
+
+    <script>
+    setInterval(() => {
+        fetch("https://api.mcstatus.io/v2/status/java/play.skynova.com")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("oyuncu").innerText =
+                `${data.players.online} kişi şu anda sunucuda!`;
+        })
+        .catch(() => {
+            document.getElementById("oyuncu").innerText = "Sunucuya ulaşılamıyor!";
+        });
+    }, 30000);
+    </script>
+</body>
+</html>

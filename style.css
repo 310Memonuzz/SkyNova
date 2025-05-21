@@ -1,0 +1,40 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0e0e1b;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+header {
+    text-align: center;
+    background-color: #12122b;
+    padding: 20px;
+}
+.banner {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 30px;
+}
+.package {
+    background-color: #1e1e2f;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+footer {
+    background-color: #12122b;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+}
